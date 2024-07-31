@@ -1,0 +1,10 @@
+console.log("rohit");
+let score="33abc";
+console.log(typeof (score));
+let typeconvertor = Number(score);
+console.log(typeof(typeconvertor));
+console.log(typeconvertor);
+let name =null;
+console.log(typeof (name));
+let main = undefined;
+console.log(main);
