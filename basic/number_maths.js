@@ -20,3 +20,7 @@ console.log(Math.ceil(2.1));  // greater value
 console.log(Math.round(3.8)); // round off
 console.log(Math.min(2,4,6,7,8,9));
 console.log(Math.random()); // value randomally comes between 0 and 1 
+console.log((Math.random())*10+1);  // to find between 1 and 10
+const min=10;
+const max=20;
+console.log(Math.floor(Math.random()*(max-min+1)+(min)));
