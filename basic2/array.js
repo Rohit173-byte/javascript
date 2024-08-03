@@ -38,7 +38,8 @@
 // console.log(real_array);
 console.log(Array.isArray("rohit"));
 console.log(Array.from("rohit"));
-console.log(Array.from({name:"rohit"}));  // important
+console.log(Array.from({name:"rohit"}));  // important  // it can;t key nad value into array at th same time . we have to 
+// assign which value we need the array 
    const num1= 23 , num2=56 , num3 = 56;
    console.log(Array.of(num1,num2,num3));
    
