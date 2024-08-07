@@ -14,15 +14,16 @@
 // // user.username = "ankit" ;
 // // user.welcome()
 // // console.log(this);
-
-// function chai(){
-// const a =45;
-// console.log(a);
-
-//     console.log(this);
+const code = {
+  username:"rohit",
+  password:1234,
+   chai:function(){
+    console.log(this);
     
-// }
-// chai()
+   }
+}
+
+code.chai()
 
 //  const chai1 = function chai(){
 //     const a =45;
