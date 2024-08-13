@@ -29,6 +29,22 @@ map.set('USA',"UNITED STATE  OD AMERICA")
 //console.log(map);
 
 for (const [key,value] of map) {
-    console.log(key ,"=>", value);
+   // console.log(key ,"=>", value);
+    
+}
+
+const detail = {
+    username:"rohit",
+    age:22,
+    college:"gehu"
+}
+for (const key in detail) {
+console.log(`${key} shortcut is ${detail[key]}`);
+
+}
+
+const myarr =[20,60,79]
+for (const key in myarr) {
+    console.log(`the key  ${key} value is ${myarr[key]}`);
     
 }

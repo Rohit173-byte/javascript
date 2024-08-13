@@ -18,7 +18,7 @@ const code = {
   username:"rohit",
   password:1234,
    chai:function(){
-    console.log(this);
+    //console.log(this);
     
    }
 }
@@ -41,7 +41,7 @@ const chai = () => {
     const a =45
     
     
-        console.log(this);
+        //console.log(this);
        // console.log(this.a);
         
         
@@ -55,11 +55,11 @@ const chai = () => {
   
     
 
-// const addnumber = (num1,num2) => num1+num2 
+ //const addnumber = (num1,num2) => num1+num2 
   
 
-// const addnumber = (num1,num2) => (num1+num2)
+//const addnumber = (num1,num2) => (num1+num2)
 
 const addnumber = (num1,num2) => ({username:"rohit"})
-  console.log(addnumber());
+  console.log(addnumber(2,7));
   
