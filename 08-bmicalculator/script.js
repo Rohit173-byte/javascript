@@ -4,6 +4,7 @@ form.addEventListener('submit',(e)=>{
   const height=parseInt(document.querySelector("#height").value)
   const weight=parseInt(document.querySelector("#weight").value)
   const result=document.querySelector("#results")
+  
   if(height==''||height<0||isNaN(height)){
     result.innerHTML="please enter the valid value "
     
@@ -13,17 +14,20 @@ form.addEventListener('submit',(e)=>{
     
     }
     else{
-     const bmi= (weight/((height*height)/10000)).toFixed(2)
+      const bmi= (weight/((height*height)/10000)).toFixed(2)
      //show in redult
-     result.innerHTML=`<span>${bmi}</span>`;
+     
+     let bmiCategory ;
+     if(bmi<18.6){
+         bmiCategory="you are under weight"
+      }
+      else if(bmi>26.6){
+        bmiCategory="you are over weight"
+      }
+      else{
+       bmiCategory="you have perfect bmi"
+      }
+      result.innerHTML=`<span>${bmi}</span><br><span>${bmiCategory}</span>`;
+    }
     
-    if(bmi<18.6){
-      console.log("you are under weight")
-    }
-    else if(bmi>26.6){
-      console.log("you are over weight")
-    }
-    else{
-      console.log("you have perfect bmi")
-    }}
 })
