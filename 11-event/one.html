@@ -54,12 +54,16 @@
     //e.stopPropagation()
     
  },false)
-document.querySelector('#images').addEventListener('click',function(e){
-    let removeIt=e.target.parentNode;
-    removeIt.remove()
-
-    
-},false)
- 
+// document.querySelector('#images').addEventListener('click',function(e){
+//     let removeIt=e.target.parentNode;
+//     removeIt.remove()
+//removeIt.parentNode.removechild(removeIt)    
+//},false)
+ document.querySelector('.images'.addEventListener('click',function(e){
+    let removeIt=e.target.tagName;
+    if(removeIt=='IMG'){
+        removeIt.remove()
+    }
+ }))
 </script>
 </html>
