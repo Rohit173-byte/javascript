@@ -63,6 +63,7 @@ else if(guess<randomnumber){
   displayMessage("your guess is low")
 }
 }
+
 function cleanguess(guess){
 userInput.value=``
 guessSlot.innerHTML+=`${guess}  `
@@ -76,6 +77,7 @@ lastGuess.innerHTML=`${11-numguess}`
 function displayMessage(message){
 lowOrhi.innerHTML=`<h2>${message}</h2>`
 }
+
 function endgame(){
 userInput.innerHTML=''
 userInput.setAttribute('disabled','')
