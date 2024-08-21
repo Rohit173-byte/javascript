@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>RANDOM COLOR</title>
+</head>
+<body>
+    <button class="start">START </button>
+    <button class="stop">STOP</button>
+</body>
+<script>
+    const start=document.querySelector('.start')
+    const stop=document.querySelector('.stop')
+  let intervalid;
+    function random(number){
+ return(Math.floor(Math.random()*number))
+    }
+    
+   const color= function(){
+        const rbg=`rgb(${random(266)},${random(266)},${random(266)})`
+        document
+        .body.style.backgroundColor=rbg
+   }
+function interval1(){
+  intervalid= setInterval(color,'1000')
+
+}
+    function stopit(){
+        clearInterval(intervalid)
+        intervalid=null
+    }    
+    
+   start.addEventListener('click',interval1)
+stop.addEventListener('click',stopit)
+
+    
+    
+    
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="me"> chai aur code</h1>
+    <button class="stop">STOP</button>
+</body>
+<script>
+    const text=document.querySelector('#me')
+    const changetext=function(){
+        text.innerHTML="rohit chamoli"
+    }
+    const timestop=setTimeout(changetext,'3000')
+   const changeme=document.querySelector('.stop')
+
+   changeme.addEventListener('click',function(){
+    clearTimeout(timestop)
+   })
+</script>
+</html>

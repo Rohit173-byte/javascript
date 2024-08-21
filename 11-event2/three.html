@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="me"> javascript</h1>
+    <button class="stop">STOP</button>
+    <button class="start">START</button>
+</body>
+<script>
+    const start=document.querySelector('.start')
+    const stop=document.querySelector('.stop')
+    const values=document.querySelector('#me').nodeValue
+    console.log(values);
+    
+    let interval
+    const say=function(){
+console.log("rohit");
+   }
+   
+   const me = function(){
+     interval=setInterval(say,1000)
+     
+    
+   }
+   start.addEventListener('click',me)
+   const me1=function(){
+    clearInterval(interval)
+   }
+    stop.addEventListener('click',me1)
+   
+</script>
+</html>
