@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.output{
+    width:200px;
+        border:10px solid;
+        border-color:red;
+        height: 100px;
+        padding: 50px;
+        overflow-y: auto;
+        color:black;
+        
+}
+.image{
+    height: 80px;
+    
+}
+    </style>
+</head>
+<div class="output"></div>
+<body>
+
+    <button class="button">INFO</button>
+    <!--<img class="image" src="https://4kwallpapers.com/anime/solo-leveling-game-17908.html">-->
+</body>
+<script>
+  
+  const url='https://api.github.com/users/hiteshchoudhary'
+  const info=document.querySelector('button')
+  const output=document.querySelector('.output')
+  //const image=document.querySelector('.image')
+    // const mynode=document.createTextNode('')
+    // output.appendChild(mynode)
+     //console.log(output);
+    
+    
+    const xhr= new XMLHttpRequest()
+    xhr.open('get',url)
+
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState===4){
+       const data =JSON.parse(this.responseText)
+        
+        const myresult = `
+                        <p>FOLLOWERS ARE: ${data.followers}</p>
+                        <p>ID IS: ${data.id}</p>
+                        <img class="image" src=${data.avatar_url}>
+                    `;
+    output.innerHTML=myresult  
+    }
+    //<img class="image" src="${data.avatar_url}" alt="Avatar">
+  }
+    
+
+  info.addEventListener('click',function(e){
+    
+    xhr.send() 
+  })
+    
+  
+    
+</script>
+</html>
